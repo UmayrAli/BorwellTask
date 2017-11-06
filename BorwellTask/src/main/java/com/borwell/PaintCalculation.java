@@ -12,6 +12,8 @@ public class PaintCalculation
 
     public double RequiredPaint(double WallWidth, double WallHeight, double WindowWidth, double WindowHeight, double NumberOfWalls, double NumberOfDoors, double NumberOfWindows)
     {
+        double ReturnValue = 0;
+
         //Setting the areas
         double WallArea = WallWidth * WallHeight;
         double WindowArea = WindowWidth * WindowHeight;
@@ -25,8 +27,9 @@ public class PaintCalculation
         //Area Manipulation
         double TotalWallArea = FullWallArea - (FullWindowArea + FullDoorArea); // Only walls, no windows or doors.
         double PaintRequired = TotalWallArea / 10; //1 litre of paint can cover 10 square metres.
+        ReturnValue = PaintRequired;
 
-        return PaintRequired;
+        return ReturnValue;
     }
     public double VolumeOfRoom (double RoomWidth, double RoomHeight, double RoomDepth)
     {
